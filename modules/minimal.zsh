@@ -9,9 +9,10 @@ function prompt_minimal() {
   local rs="%{$reset_color%}"
   local green="%{$fg[green]%}"
   local red="%{$fg[red]%}"
+  local default="%{[38;5;244m%}"
 
-  local user_privilege="%(!.$green.$rs)$PROMPT_CHAR$rs"
-  local bg_job="%(1j.$green.$rs)$PROMPT_CHAR$rs"
+  local user_privilege="%(!.$green.$default)$PROMPT_CHAR$rs"
+  local bg_job="%(1j.$green.$default)$PROMPT_CHAR$rs"
   local cmd_status="%(0?.$green.$red)$PROMPT_CHAR$rs"
   local suffix=" "
 
